@@ -37,3 +37,35 @@ console.log(ahmed, " Table 2 "); */
 
 let makePizzaNew = () => "Your Pizza is being prepared"
 console.log(makePizzaNew(), " Table 3 "); */
+
+// (Test For Sir Ameen Alam)
+
+// It looks like you're trying to create a new promise, but there are a few issues with the code.
+
+// First, the correct syntax is new Promise, not newPromise. Also, the promise constructor takes a callback function that resolves or rejects the promise, but you've passed an empty callback.
+
+// Here's a corrected version:
+
+let SirZIAPromise = new Promise((resolve, reject) => {
+  // Your promise logic goes here
+  // Call resolve() to fulfill the promise
+  // Call reject() to reject the promise
+});
+
+// If you're not doing anything asynchronous, you can simply resolve the promise immediately:
+
+let SirZIAPromise = new Promise((resolve, reject) => {
+  resolve("Your promise has been fulfilled!");
+});
+
+// Or, if you want to simulate a delayed resolution:
+
+let SirZIAPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Your promise has been fulfilled!");
+  }, 1000);
+});
+
+// Remember to handle the promise using then and catch methods:
+
+SirZIAPromise.then((value) => console.log(value)).catch((error) => console.error(error));
